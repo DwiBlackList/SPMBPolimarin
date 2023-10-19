@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,11 +14,16 @@
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
+    <!-- Icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
     <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    @vite(['resources/sass/app.scss', 'resources/js/app.js' , 'resources/css/app.css'])
 </head>
+
 <body>
     <div id="app">
+        <!-- header -->
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -35,8 +41,29 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Program Studi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Jadwal Pendaftaran</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Persyaratan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Alur Pendaftaran</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Biaya</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Program Alih Jenjang (Transfer SKS)</a>
+                        </li>
                         <!-- Authentication Links -->
-                        @guest
+                        <!-- @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -66,15 +93,22 @@
                                     </form>
                                 </div>
                             </li>
-                        @endguest
+                        @endguest -->
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <main class="py-4">
+        <!-- konten -->
+        <main class="">
             @yield('content')
         </main>
+
+        <!-- Footer -->
+        <div class="container py-5">
+            Copyright © 2023 pmb polimarin, All Rights Reserved.
+        </div>
     </div>
 </body>
+
 </html>
