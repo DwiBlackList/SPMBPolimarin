@@ -34,3 +34,8 @@ Route::get('/jadwal-pendaftaran', function () {
 Route::get('/persyaratan', function () {
     return view('persyaratan');
 })->name('persyaratan');
+
+
+Route::get('/alur-pendaftaran', function () {
+    return view('alur-pendaftaran');
+})->name('alur-pendaftaran');

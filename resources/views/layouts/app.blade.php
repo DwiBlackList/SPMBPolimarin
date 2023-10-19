@@ -54,7 +54,7 @@
                             <a class="nav-link" href="{{ route('persyaratan') }}">Persyaratan</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Alur Pendaftaran</a>
+                            <a class="nav-link" href="{{ route('alur-pendaftaran') }}">Alur Pendaftaran</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Biaya</a>
