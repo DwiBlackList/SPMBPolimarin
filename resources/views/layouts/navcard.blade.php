@@ -65,7 +65,7 @@
                 </div>
             </a>
             <hr>
-            <a href="/">
+            <a href="{{ route('tes-kekhususan') }}">
                 <div class="d-flex align-content-center">
                     <span class="material-symbols-outlined">
                         arrow_forward_ios

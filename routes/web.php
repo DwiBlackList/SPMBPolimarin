@@ -63,3 +63,8 @@ Route::get('/seleksi-jalur-tes', function () {
 Route::get('/seleksi-jalur-mandiri', function () {
     return view('seleksi-jalur-mandiri');
 })->name('seleksi-jalur-mandiri');
+
+
+Route::get('/tes-kekhususan', function () {
+    return view('tes-kekhususan');
+})->name('tes-kekhususan');
