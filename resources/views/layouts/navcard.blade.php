@@ -57,7 +57,7 @@
                 </div>
             </a>
             <hr>
-            <a href="/">
+            <a href="{{ route('seleksi-jalur-mandiri') }}">
                 <div class="d-flex align-content-center">
                     <span class="material-symbols-outlined">
                         arrow_forward_ios
