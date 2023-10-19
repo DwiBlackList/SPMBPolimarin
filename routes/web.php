@@ -53,3 +53,8 @@ Route::get('/program-alih-jenjang', function () {
 Route::get('/seleksi-jalur-prestasi', function () {
     return view('seleksi-jalur-prestasi');
 })->name('seleksi-jalur-prestasi');
+
+
+Route::get('/seleksi-jalur-tes', function () {
+    return view('seleksi-jalur-tes');
+})->name('seleksi-jalur-tes');
