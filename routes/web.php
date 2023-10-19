@@ -73,3 +73,8 @@ Route::get('/tes-kekhususan', function () {
 Route::get('/kontak', function () {
     return view('kontak');
 })->name('kontak');
+
+
+Route::get('/download', function () {
+    return view('download');
+})->name('download');
