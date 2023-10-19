@@ -24,3 +24,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 Route::get('/program-studi', [ProgramStudiController::class, 'index'])->name('program-studi');
+
+
+Route::get('/jadwal-pendaftaran', function () {
+    return view('jadwal-pendaftaran');
+})->name('jadwal-pendaftaran');

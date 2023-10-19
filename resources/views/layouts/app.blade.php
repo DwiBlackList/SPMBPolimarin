@@ -48,7 +48,7 @@
                             <a class="nav-link" href="{{ route('program-studi') }}">Program Studi</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Jadwal Pendaftaran</a>
+                            <a class="nav-link" href="{{ route('jadwal-pendaftaran') }}">Jadwal Pendaftaran</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Persyaratan</a>
