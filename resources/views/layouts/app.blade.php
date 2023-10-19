@@ -60,7 +60,7 @@
                             <a class="nav-link" href="{{ route('biaya') }}">Biaya</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Program Alih Jenjang (Transfer SKS)</a>
+                            <a class="nav-link" href="{{ route('program-alih-jenjang') }}">Program Alih Jenjang (Transfer SKS)</a>
                         </li>
                         <!-- Authentication Links -->
                         <!-- @guest

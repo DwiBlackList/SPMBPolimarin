@@ -44,3 +44,7 @@ Route::get('/alur-pendaftaran', function () {
 Route::get('/biaya', function () {
     return view('biaya');
 })->name('biaya');
+
+Route::get('/program-alih-jenjang', function () {
+    return view('program-alih-jenjang');
+})->name('program-alih-jenjang');
