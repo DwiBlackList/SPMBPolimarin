@@ -147,13 +147,15 @@
                         <p>Jadwal</p>
                         <br>
                         <h2>A.Seleksi Jalur Prestasi (SJP)</h2>
-                        <table class="table table-responsive table-bordered">
-                            <tr>
-                                <td>No</td>
-                                <td>Kegiatan</td>
-                                <td>Waktu Pelaksanaan</td>
-                            </tr>
-                        </table>
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td>No</td>
+                                    <td>Kegiatan</td>
+                                    <td>Waktu Pelaksanaan</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>

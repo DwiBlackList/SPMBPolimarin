@@ -16,29 +16,32 @@
             <!-- Konten Kiri -->
             <div class="col-md-8 col-12">
                 <h1 class="text-bold">Jurusan Nautika</h1>
-                <table class="table-responsive table-bordered" width="100%">
-                    <tr>
-                        <td>Program Studi</td>
-                        <td>Jenjang Pendidikan</td>
-                        <td>Akreditasi</td>
-                    </tr>
-                    <tr>
-                        <td>Nautika</td>
-                        <td>D4</td>
-                        <td>Baik</td>
-                    </tr>
-                    <tr>
-                        <td>Nautika</td>
-                        <td>D3</td>
-                        <td>B</td>
-                    </tr>
-                </table>
+                <div class="table-responsive">
+
+                    <table class="table-bordered" width="100%">
+                        <tr>
+                            <td>Program Studi</td>
+                            <td>Jenjang Pendidikan</td>
+                            <td>Akreditasi</td>
+                        </tr>
+                        <tr>
+                            <td>Nautika</td>
+                            <td>D4</td>
+                            <td>Baik</td>
+                        </tr>
+                        <tr>
+                            <td>Nautika</td>
+                            <td>D3</td>
+                            <td>B</td>
+                        </tr>
+                    </table>
+                </div>
 
                 <br>
 
                 <p class="text-bold">Profil bla bla di <a href="http://polimarin.ac.id" target="_blank" class="text-primary">http://polimarin.ac.id</a></p>
 
-                
+
             </div>
 
             <!-- Kartu Navigasi kanan -->
