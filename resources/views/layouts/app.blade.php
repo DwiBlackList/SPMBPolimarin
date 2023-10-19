@@ -42,7 +42,7 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
+                            <a class="nav-link" href="/">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('program-studi') }}">Program Studi</a>
@@ -51,7 +51,7 @@
                             <a class="nav-link" href="{{ route('jadwal-pendaftaran') }}">Jadwal Pendaftaran</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Persyaratan</a>
+                            <a class="nav-link" href="{{ route('persyaratan') }}">Persyaratan</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Alur Pendaftaran</a>

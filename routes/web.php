@@ -29,3 +29,8 @@ Route::get('/program-studi', [ProgramStudiController::class, 'index'])->name('pr
 Route::get('/jadwal-pendaftaran', function () {
     return view('jadwal-pendaftaran');
 })->name('jadwal-pendaftaran');
+
+
+Route::get('/persyaratan', function () {
+    return view('persyaratan');
+})->name('persyaratan');
