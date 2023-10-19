@@ -48,3 +48,8 @@ Route::get('/biaya', function () {
 Route::get('/program-alih-jenjang', function () {
     return view('program-alih-jenjang');
 })->name('program-alih-jenjang');
+
+
+Route::get('/seleksi-jalur-prestasi', function () {
+    return view('seleksi-jalur-prestasi');
+})->name('seleksi-jalur-prestasi');
