@@ -5,3 +5,7 @@ a{
 a:hover{
     color: black;
 }
+
+.text-bold{
+    font-weight: bold;
+}
