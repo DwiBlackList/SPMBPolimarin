@@ -57,7 +57,7 @@
                             <a class="nav-link" href="{{ route('alur-pendaftaran') }}">Alur Pendaftaran</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Biaya</a>
+                            <a class="nav-link" href="{{ route('biaya') }}">Biaya</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Program Alih Jenjang (Transfer SKS)</a>

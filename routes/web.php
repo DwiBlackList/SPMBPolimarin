@@ -39,3 +39,8 @@ Route::get('/persyaratan', function () {
 Route::get('/alur-pendaftaran', function () {
     return view('alur-pendaftaran');
 })->name('alur-pendaftaran');
+
+
+Route::get('/biaya', function () {
+    return view('biaya');
+})->name('biaya');
