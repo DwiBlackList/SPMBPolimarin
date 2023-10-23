@@ -26,8 +26,8 @@
         <!-- header -->
         <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" style="padding-right: 0; width: 20%;" href="{{ url('/') }}">
-                    <img src="https://pmb.polimarin.ac.id/wp-content/themes/Ostion%20Theme%20Package/ostion/images/logo.png" alt="logo" style="max-width: 100%; height:auto;">
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    <img src="https://pmb.polimarin.ac.id/wp-content/themes/Ostion%20Theme%20Package/ostion/images/logo.png" alt="logo" width="40%">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -47,21 +47,51 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('program-studi') }}">Program Studi</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('jadwal-pendaftaran') }}">Jadwal Pendaftaran</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Informasi</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('jadwal-pendaftaran') }}">Jadwal Pendaftaran</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('persyaratan') }}">Persyaratan</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('alur-pendaftaran') }}">Alur Pendaftaran</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('biaya') }}">Biaya</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('program-alih-jenjang') }}">Program Alih Jenjang (Transfer SKS)</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('tes-kekhususan') }}">Tes Kekhususan</a>
+                                </li>                                
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('kontak') }}">Kontak</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('download') }}">Download</a>
+                                </li>
+                            </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('persyaratan') }}">Persyaratan</a>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Jalur Seleksi</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('seleksi-jalur-prestasi') }}">Jalur Prestasi</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('seleksi-jalur-tes') }}">Jalur Tes</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('seleksi-jalur-mandiri') }}">Jalur Mandiri</a>
+                                </li>
+                            </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('alur-pendaftaran') }}">Alur Pendaftaran</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('biaya') }}">Biaya</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('program-alih-jenjang') }}">Program Alih Jenjang (Transfer SKS)</a>
-                        </li>
+
                         <!-- Authentication Links -->
                         <!-- @guest
                             @if (Route::has('login'))
