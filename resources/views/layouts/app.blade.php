@@ -24,10 +24,10 @@
 <body>
     <div id="app">
         <!-- header -->
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                <a class="navbar-brand" style="padding-right: 0; width: 20%;" href="{{ url('/') }}">
+                    <img src="https://pmb.polimarin.ac.id/wp-content/themes/Ostion%20Theme%20Package/ostion/images/logo.png" alt="logo" style="max-width: 100%; height:auto;">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -104,6 +104,9 @@
             @yield('content')
         </main>
 
+        <div class="floating-button">
+            <a href="https://wa.me/6282138929393" target="_blank" class="floating-btn">Live Chat PMB</a>
+        </div>
         <!-- Footer -->
         <div class="container py-5">
             Copyright © 2023 pmb polimarin, All Rights Reserved.
