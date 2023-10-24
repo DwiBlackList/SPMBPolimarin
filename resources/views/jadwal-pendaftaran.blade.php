@@ -2,65 +2,139 @@
 
 @section('content')
 <!-- Paling atas -->
-<div class="container-fluid">
-    <div class="row justify-content-center">
-        <div class="bg-warning text-white">
-            <h1>Jadwal Pendaftaran</h1>
-        </div>
-    </div>
+<div class="p-5 bg-primary text-white">
+    <h1>Jadwal Pendaftaran</h1>
+    <p>Berikut Lampiran Jadwal</p>
 </div>
 
 <div class="py-5 bg-info"> <!-- Rubah bg dan padding atas -->
     <div class="container">
-        <div class="row justify-content-center">
-            <!-- Kartu Navigasi kiri -->
-            @include('layouts.navcard')
-            <!-- Konten Kanan -->
-            <div class="col-md-8 col-12">
-                <p>Jadwal Pendaftaran dan Seleksi Calon Mahasiswa Baru Tahun 2023:</p>
-                <h4 class="text-bold">A. Seleksi</h4>
-                <br>
+        <div class="row">
+            <div class="col-md-6 col-12">
                 <div class="table-responsive">
-
-                    <table class="table-bordered" width="100%">
+                    <table class="table table-striped ">
                         <tr>
-                            <td>No</td>
-                            <td>Kegiatan</td>
-                            <td>Waktu Pelaksanaa</td>
+                            <td colspan="2"><strong>Seleksi Jalur Prestasi (SJP)</strong></td>
                         </tr>
                         <tr>
-                            <td>1</td>
+                            <td>Kegiatan</td>
+                            <td>Waktu Pelaksanaan</td>
+                        </tr>
+                        <tr>
                             <td>Pendaftaran</td>
-                            <td>1Feb - 99 Jan</td>
+                            <td>1 Februari – 28 Februari 2023</td>
+                        </tr>
+                        <tr>
+                            <td>Seleksi Administrasi</td>
+                            <td>2 Februari – 1 Maret 2023</td>
+                        </tr>
+                        <tr>
+                            <td>Seleksi Prestasi</td>
+                            <td>1 Maret 2023</td>
+                        </tr>
+                        <tr>
+                            <td>Tes Kesehatan</td>
+                            <td>1 Februari – 28 Februari 2023 (Portofolio)</td>
+                        </tr>
+                        <tr>
+                            <td>Wawancara</td>
+                            <td>1 Februari – 28 Februari 2023 (Portofolio)</td>
+                        </tr>
+                        <tr>
+                            <td>Tes Psikotes</td>
+                            <td>1 Februari – 28 Februari 2023 (Portofolio)</td>
+                        </tr>
+                        <tr>
+                            <td>Tes Kesamaptaan</td>
+                            <td>1 Februari – 28 Februari 2023 (Portofolio)</td>
                         </tr>
                     </table>
                 </div>
-
-                <br>
-
-                <h4 class="text-bold">A. Seleksi</h4>
-                <br>
+            </div>
+            <div class="col-md-6 col-12">
                 <div class="table-responsive">
-                    <table class="table-bordered" width="100%">
+                    <table class="table table-striped ">
                         <tr>
-                            <td>No</td>
-                            <td>Kegiatan</td>
-                            <td>Waktu Pelaksanaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa a aaaaaaaaaaa aaaaaaaaaaaaaaaaaaa </td>
+                            <td colspan="2"><strong>Seleksi Jalur Prestasi (SJP)</strong></td>
                         </tr>
                         <tr>
-                            <td>1</td>
+                            <td>Kegiatan</td>
+                            <td>Waktu Pelaksanaan</td>
+                        </tr>
+                        <tr>
                             <td>Pendaftaran</td>
-                            <td>1Feb - 99 Jan</td>
+                            <td>1 Februari – 28 Februari 2023</td>
+                        </tr>
+                        <tr>
+                            <td>Seleksi Administrasi</td>
+                            <td>2 Februari – 1 Maret 2023</td>
+                        </tr>
+                        <tr>
+                            <td>Seleksi Prestasi</td>
+                            <td>1 Maret 2023</td>
+                        </tr>
+                        <tr>
+                            <td>Tes Kesehatan</td>
+                            <td>1 Februari – 28 Februari 2023 (Portofolio)</td>
+                        </tr>
+                        <tr>
+                            <td>Wawancara</td>
+                            <td>1 Februari – 28 Februari 2023 (Portofolio)</td>
+                        </tr>
+                        <tr>
+                            <td>Tes Psikotes</td>
+                            <td>1 Februari – 28 Februari 2023 (Portofolio)</td>
+                        </tr>
+                        <tr>
+                            <td>Tes Kesamaptaan</td>
+                            <td>1 Februari – 28 Februari 2023 (Portofolio)</td>
                         </tr>
                     </table>
                 </div>
-
-                <br>
-
-                <h1 class="text-bold text-warning">SELURUH LAYANAN KEGIATAN TERKAIT DENGAN PMB 2023 AKAN DIAKHIRI JAM 15.00 WIB</h1>
-
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="table-responsive">
+                    <table class="table table-striped ">
+                        <tr>
+                            <td colspan="2"><strong>Seleksi Jalur Prestasi (SJP)</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Kegiatan</td>
+                            <td>Waktu Pelaksanaan</td>
+                        </tr>
+                        <tr>
+                            <td>Pendaftaran</td>
+                            <td>1 Februari – 28 Februari 2023</td>
+                        </tr>
+                        <tr>
+                            <td>Seleksi Administrasi</td>
+                            <td>2 Februari – 1 Maret 2023</td>
+                        </tr>
+                        <tr>
+                            <td>Seleksi Prestasi</td>
+                            <td>1 Maret 2023</td>
+                        </tr>
+                        <tr>
+                            <td>Tes Kesehatan</td>
+                            <td>1 Februari – 28 Februari 2023 (Portofolio)</td>
+                        </tr>
+                        <tr>
+                            <td>Wawancara</td>
+                            <td>1 Februari – 28 Februari 2023 (Portofolio)</td>
+                        </tr>
+                        <tr>
+                            <td>Tes Psikotes</td>
+                            <td>1 Februari – 28 Februari 2023 (Portofolio)</td>
+                        </tr>
+                        <tr>
+                            <td>Tes Kesamaptaan</td>
+                            <td>1 Februari – 28 Februari 2023 (Portofolio)</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
+
     </div>
 </div>
 @endsection
