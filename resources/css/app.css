@@ -30,3 +30,12 @@ a:hover{
 .floating-btn:hover {
     background-color: #0056b3;
 }
+
+.card {
+    transition: box-shadow 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #0056b3;
+}
