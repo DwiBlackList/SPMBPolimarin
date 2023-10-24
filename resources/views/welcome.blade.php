@@ -174,9 +174,9 @@
                 <td>1 Februari – 28 Februari 2023 (Portofolio)</td>
             </tr>
         </table>
-
-        <hr>
-
+    </div>
+    <hr>
+    <div class="table-responsive">
         <table class="table table-striped ">
             <tr>
                 <td colspan="2"><strong>Seleksi Jalur Prestasi (SJP)</strong></td>
@@ -214,9 +214,9 @@
                 <td>1 Februari – 28 Februari 2023 (Portofolio)</td>
             </tr>
         </table>
-
-        <hr>
-
+    </div>
+    <hr>
+    <div class="table-responsive">
         <table class="table table-striped ">
             <tr>
                 <td colspan="2"><strong>Seleksi Jalur Prestasi (SJP)</strong></td>
