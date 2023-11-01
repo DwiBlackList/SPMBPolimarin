@@ -17,8 +17,11 @@
     <!-- Icon -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
+
     <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js' , 'resources/css/app.css'])
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 
 <body>
