@@ -1,8 +1,8 @@
-a{
+#navcard{
     text-decoration: none;
     color: grey;
 }
-a:hover{
+#navcard:hover{
     color: black;
 }
 

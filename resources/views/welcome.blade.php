@@ -72,59 +72,69 @@
         </center>
     </div>
 </div>
-<div style="background-color:#f6f6f7;">
-    <div class="container py-5">
-        <div class="row">
-            <div class="col-md-5 col-12">
-                <p class="h1 text-bold"> Pengumuman</p>
-                <hr width="15%" style="border-width: 5px;">
-                <p>
-                    Cek Pengumuman Hasil Seleksi dan Proses Daftar Ulang Disini
-                </p>
-            </div>
-            <div class="col-md-7 col-12">
-                <div class="row">
-                    <div class="col-md-6 col-12 py-2">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <span class="material-symbols-outlined">
-                                    description
-                                </span>
-                                <p class="h6">PENGUMUMAN SELEKSI PROGRAM MAGISTER TERAPAN (GEL 2)</p>
-                                <p>Pengumuman hasil seleksi Program Magister Terapan POLINES 2023 (Gelombang 2)</p>
-                            </div>
+<div class="container-fluid py-5" style="background-color:#f6f6f7;">
+    <div class="row">
+        <div class="col-12 col-md-2">
+            @include('layouts.navcard')
+        </div>
+        <div class="col-12 col-md-10">
+
+            <div>
+                <div class="container py-5">
+                    <div class="row">
+                        <div class="col-md-5 col-12">
+                            <p class="h1 text-bold"> Pengumuman</p>
+                            <hr width="15%" style="border-width: 5px;">
+                            <p>
+                                Cek Pengumuman Hasil Seleksi dan Proses Daftar Ulang Disini
+                            </p>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-12 py-2">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <span class="material-symbols-outlined">
-                                    description
-                                </span>
-                                <p class="h6">PENGUMUMAN SELEKSI PROGRAM MAGISTER TERAPAN (GEL 2)</p>
-                                <p>Pengumuman hasil seleksi Program Magister Terapan POLINES 2023 (Gelombang 2)</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-12 py-2">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <span class="material-symbols-outlined">
-                                    description
-                                </span>
-                                <p class="h6">PENGUMUMAN SELEKSI PROGRAM MAGISTER TERAPAN (GEL 2)</p>
-                                <p>Pengumuman hasil seleksi Program Magister Terapan POLINES 2023 (Gelombang 2)</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-12 py-2">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <span class="material-symbols-outlined">
-                                    description
-                                </span>
-                                <p class="h6">PENGUMUMAN SELEKSI PROGRAM MAGISTER TERAPAN (GEL 2)</p>
-                                <p>Pengumuman hasil seleksi Program Magister Terapan POLINES 2023 (Gelombang 2)</p>
+                        <div class="col-md-7 col-12">
+                            <div class="row">
+                                <div class="col-md-6 col-12 py-2">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <span class="material-symbols-outlined">
+                                                description
+                                            </span>
+                                            <p class="h6">PENGUMUMAN SELEKSI PROGRAM MAGISTER TERAPAN (GEL 2)</p>
+                                            <p>Pengumuman hasil seleksi Program Magister Terapan POLINES 2023 (Gelombang 2)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12 py-2">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <span class="material-symbols-outlined">
+                                                description
+                                            </span>
+                                            <p class="h6">PENGUMUMAN SELEKSI PROGRAM MAGISTER TERAPAN (GEL 2)</p>
+                                            <p>Pengumuman hasil seleksi Program Magister Terapan POLINES 2023 (Gelombang 2)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12 py-2">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <span class="material-symbols-outlined">
+                                                description
+                                            </span>
+                                            <p class="h6">PENGUMUMAN SELEKSI PROGRAM MAGISTER TERAPAN (GEL 2)</p>
+                                            <p>Pengumuman hasil seleksi Program Magister Terapan POLINES 2023 (Gelombang 2)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12 py-2">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <span class="material-symbols-outlined">
+                                                description
+                                            </span>
+                                            <p class="h6">PENGUMUMAN SELEKSI PROGRAM MAGISTER TERAPAN (GEL 2)</p>
+                                            <p>Pengumuman hasil seleksi Program Magister Terapan POLINES 2023 (Gelombang 2)</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -132,6 +142,7 @@
             </div>
         </div>
     </div>
+
 </div>
 <div class="container py-5">
     <p class="h1">Jadwal Pendaftaran</p>
