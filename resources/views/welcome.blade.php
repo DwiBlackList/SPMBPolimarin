@@ -41,30 +41,17 @@
         </p>
 
         <div class="row">
+            @foreach($jadwal as $x)
             <div class="col-12 col-md-4 align-content-center">
                 <center>
                     <p>
-                        Seleksi Jalur Prestasi (SJP)
+                        {{ $x->nama_jalur }}
                     </p>
-                    <a href="#" class="btn btn-secondary">1 - 28 February 2023</a>
+                    <a href="#" class="btn btn-secondary">{{ $x->tanggal }}</a>
                 </center>
             </div>
-            <div class="col-12 col-md-4 align-content-center">
-                <center>
-                    <p>
-                        Seleksi Jalur Tes (SJT)
-                    </p>
-                    <a href="#" class="btn btn-secondary">23 Maret - 31 Mei 2023</a>
-                </center>
-            </div>
-            <div class="col-12 col-md-4 align-content-center">
-                <center>
-                    <p>
-                        Seleksi Jalur Mandiri (SJM)
-                    </p>
-                    <a href="#" class="btn btn-secondary">22 Juni - 20 July 2023</a>
-                </center>
-            </div>
+            @endforeach
+            
         </div>
         <hr>
         <center>

@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\JadwalController;
 use App\Http\Controllers\ProgramStudiController;
+use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,13 +16,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [WelcomeController::class , 'index']);
 
 Auth::routes();
-
+//admin
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Jadwal Route
+Route::resource('/jadwal', JadwalController::class);
 
 
 Route::get('/program-studi', [ProgramStudiController::class, 'index'])->name('program-studi');

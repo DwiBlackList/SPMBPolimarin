@@ -19,6 +19,10 @@
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
+    <!-- Include jQuery from a CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -96,7 +100,7 @@
                         </li>
                         @else
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Jadwal</a>
+                            <a class="nav-link" href="{{ route('jadwal.index') }}">Jadwal</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Pengumuman</a>
