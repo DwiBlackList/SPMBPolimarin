@@ -51,7 +51,7 @@
                 </center>
             </div>
             @endforeach
-            
+
         </div>
         <hr>
         <center>
@@ -78,50 +78,29 @@
                         </div>
                         <div class="col-md-7 col-12">
                             <div class="row">
-                                <div class="col-md-6 col-12 py-2">
-                                    <div class="card">
-                                        <div class="card-body text-center">
-                                            <span class="material-symbols-outlined">
-                                                description
-                                            </span>
-                                            <p class="h6">PENGUMUMAN SELEKSI PROGRAM MAGISTER TERAPAN (GEL 2)</p>
-                                            <p>Pengumuman hasil seleksi Program Magister Terapan POLINES 2023 (Gelombang 2)</p>
+                                @foreach($pengumuman as $x)
+                                <a id="link-pengumuman" href="{{ route('viewPengumuman' , $x->id) }}">
+                                    <div class="col-md-6 col-12 py-2">
+                                        <div class="card">
+                                            <div class="card-body text-center">
+                                                <span class="material-symbols-outlined">
+                                                    description
+                                                </span>
+                                                <p class="h3">{{ $x->judul }}</p>
+                                                <p>{{ $x->subjudul }}</p>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        {{ $x->user->name }}
+                                                    </div>
+                                                    <div class="col-6">
+                                                        {{ $x->created_at }}
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6 col-12 py-2">
-                                    <div class="card">
-                                        <div class="card-body text-center">
-                                            <span class="material-symbols-outlined">
-                                                description
-                                            </span>
-                                            <p class="h6">PENGUMUMAN SELEKSI PROGRAM MAGISTER TERAPAN (GEL 2)</p>
-                                            <p>Pengumuman hasil seleksi Program Magister Terapan POLINES 2023 (Gelombang 2)</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-12 py-2">
-                                    <div class="card">
-                                        <div class="card-body text-center">
-                                            <span class="material-symbols-outlined">
-                                                description
-                                            </span>
-                                            <p class="h6">PENGUMUMAN SELEKSI PROGRAM MAGISTER TERAPAN (GEL 2)</p>
-                                            <p>Pengumuman hasil seleksi Program Magister Terapan POLINES 2023 (Gelombang 2)</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-12 py-2">
-                                    <div class="card">
-                                        <div class="card-body text-center">
-                                            <span class="material-symbols-outlined">
-                                                description
-                                            </span>
-                                            <p class="h6">PENGUMUMAN SELEKSI PROGRAM MAGISTER TERAPAN (GEL 2)</p>
-                                            <p>Pengumuman hasil seleksi Program Magister Terapan POLINES 2023 (Gelombang 2)</p>
-                                        </div>
-                                    </div>
-                                </div>
+                                </a>
+                                @endforeach
                             </div>
                         </div>
                     </div>

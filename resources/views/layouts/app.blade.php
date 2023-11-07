@@ -24,6 +24,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    <script src="https://cdn.tiny.cloud/1/807dbzqb5t2mecju9htfi10af5vpbjqqi11avqry5dpopr8i/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
@@ -103,7 +105,7 @@
                             <a class="nav-link" href="{{ route('jadwal.index') }}">Jadwal</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Pengumuman</a>
+                            <a class="nav-link" href="{{ route('pengumuman.index') }}">Pengumuman</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Timeline</a>

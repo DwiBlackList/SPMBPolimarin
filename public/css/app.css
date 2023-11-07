@@ -6,6 +6,10 @@
     color: black;
 }
 
+#link-pengumuman{
+    text-decoration: none;
+}
+
 .text-bold{
     font-weight: bold;
 }
