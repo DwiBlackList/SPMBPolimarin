@@ -110,129 +110,41 @@
     </div>
 
 </div>
+
+
 <div class="container py-5">
     <p class="h1">Jadwal Pendaftaran</p>
     <hr width="15%" style="border-width: 5px;">
-    <div class="table-responsive">
-        <table class="table table-striped ">
-            <tr>
-                <td colspan="2"><strong>Seleksi Jalur Prestasi (SJP)</strong></td>
-            </tr>
-            <tr>
-                <td>Kegiatan</td>
-                <td>Waktu Pelaksanaan</td>
-            </tr>
-            <tr>
-                <td>Pendaftaran</td>
-                <td>1 Februari – 28 Februari 2023</td>
-            </tr>
-            <tr>
-                <td>Seleksi Administrasi</td>
-                <td>2 Februari – 1 Maret 2023</td>
-            </tr>
-            <tr>
-                <td>Seleksi Prestasi</td>
-                <td>1 Maret 2023</td>
-            </tr>
-            <tr>
-                <td>Tes Kesehatan</td>
-                <td>1 Februari – 28 Februari 2023 (Portofolio)</td>
-            </tr>
-            <tr>
-                <td>Wawancara</td>
-                <td>1 Februari – 28 Februari 2023 (Portofolio)</td>
-            </tr>
-            <tr>
-                <td>Tes Psikotes</td>
-                <td>1 Februari – 28 Februari 2023 (Portofolio)</td>
-            </tr>
-            <tr>
-                <td>Tes Kesamaptaan</td>
-                <td>1 Februari – 28 Februari 2023 (Portofolio)</td>
-            </tr>
-        </table>
-    </div>
-    <hr>
-    <div class="table-responsive">
-        <table class="table table-striped ">
-            <tr>
-                <td colspan="2"><strong>Seleksi Jalur Prestasi (SJP)</strong></td>
-            </tr>
-            <tr>
-                <td>Kegiatan</td>
-                <td>Waktu Pelaksanaan</td>
-            </tr>
-            <tr>
-                <td>Pendaftaran</td>
-                <td>1 Februari – 28 Februari 2023</td>
-            </tr>
-            <tr>
-                <td>Seleksi Administrasi</td>
-                <td>2 Februari – 1 Maret 2023</td>
-            </tr>
-            <tr>
-                <td>Seleksi Prestasi</td>
-                <td>1 Maret 2023</td>
-            </tr>
-            <tr>
-                <td>Tes Kesehatan</td>
-                <td>1 Februari – 28 Februari 2023 (Portofolio)</td>
-            </tr>
-            <tr>
-                <td>Wawancara</td>
-                <td>1 Februari – 28 Februari 2023 (Portofolio)</td>
-            </tr>
-            <tr>
-                <td>Tes Psikotes</td>
-                <td>1 Februari – 28 Februari 2023 (Portofolio)</td>
-            </tr>
-            <tr>
-                <td>Tes Kesamaptaan</td>
-                <td>1 Februari – 28 Februari 2023 (Portofolio)</td>
-            </tr>
-        </table>
-    </div>
-    <hr>
-    <div class="table-responsive">
-        <table class="table table-striped ">
-            <tr>
-                <td colspan="2"><strong>Seleksi Jalur Prestasi (SJP)</strong></td>
-            </tr>
-            <tr>
-                <td>Kegiatan</td>
-                <td>Waktu Pelaksanaan</td>
-            </tr>
-            <tr>
-                <td>Pendaftaran</td>
-                <td>1 Februari – 28 Februari 2023</td>
-            </tr>
-            <tr>
-                <td>Seleksi Administrasi</td>
-                <td>2 Februari – 1 Maret 2023</td>
-            </tr>
-            <tr>
-                <td>Seleksi Prestasi</td>
-                <td>1 Maret 2023</td>
-            </tr>
-            <tr>
-                <td>Tes Kesehatan</td>
-                <td>1 Februari – 28 Februari 2023 (Portofolio)</td>
-            </tr>
-            <tr>
-                <td>Wawancara</td>
-                <td>1 Februari – 28 Februari 2023 (Portofolio)</td>
-            </tr>
-            <tr>
-                <td>Tes Psikotes</td>
-                <td>1 Februari – 28 Februari 2023 (Portofolio)</td>
-            </tr>
-            <tr>
-                <td>Tes Kesamaptaan</td>
-                <td>1 Februari – 28 Februari 2023 (Portofolio)</td>
-            </tr>
-        </table>
-    </div>
+        @if (count($kategori) > 0)
+        @foreach ($kategori as $x)
+        @php $timelines = App\Models\Timeline::all()->where('id_kategori' , '=' , $x->id) @endphp
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <tr>
+                    <td colspan="5" class="text-bold">{{ $x->nama_kategori }}</td>
+                </tr>
+                @if (count($timelines) > 0)
+                @foreach ($timelines as $y)
+                <tr>
+                    <td>{{ $y->nama_kegiatan }}</td>
+                    <td>:</td>
+                    <td>{{ $y->tanggal }}</td>
+                </tr>
+                @endforeach
+                @else
+                <tr>
+                    <td class="h3 text-bold">Data Timeline Tidak Tersedia</td>
+                </tr>
+                @endif
+            </table>
+        </div>
+        @endforeach
+        @else
+        <p class="h3 text-bold">Data Jadwal Tidak Tersedia</p>
+        @endif
 </div>
+
+
 <div class="py-5 bg-info">
     <div class="container">
         <p class="h1">Daya Tampung Program Studi</p>

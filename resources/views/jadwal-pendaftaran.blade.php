@@ -16,177 +16,36 @@
             <div class="col-md-9 col-12">
 
                 <div class="row justify-content-center">
+                    @if (count($kategori) > 0)
+                    @foreach ($kategori as $x)
+                    @php $timelines = App\Models\Timeline::all()->where('id_kategori' , '=' , $x->id) @endphp
                     <div class="col-12 mb-5">
                         <div class="card">
                             <div class="card-body">
-                                <p class="h3 text-bold">Seleksi Jalur Prestasi (SJP) : </p>
+                                <p class="h3 text-bold">{{ $x->nama_kategori }} : </p>
+
+                                @if (count($timelines) > 0)
+                                @foreach ($timelines as $y)
                                 <table>
                                     <tr>
-                                        <td>Pendaftaran</td>
+                                        <td>{{ $y->nama_kegiatan }}</td>
                                         <td>:</td>
-                                        <td>1 Februari – 28 Februari 2023</td>
-                                    </tr>
-                                    
-                                    <tr>
-                                        <td>Seleksi Administrasi</td>
-                                        <td>:</td>
-                                        <td>1 Februari – 28 Februari 2023</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Tes Kesehatan</td>
-                                        <td>:</td>
-                                        <td>1 Februari – 28 Februari 2023</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Wawancara</td>
-                                        <td>:</td>
-                                        <td>1 Februari – 28 Februari 2023</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Tes Psikotes</td>
-                                        <td>:</td>
-                                        <td>1 Februari – 28 Februari 2023</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Tes Kesamaptaan</td>
-                                        <td>:</td>
-                                        <td>1 Februari – 28 Februari 2023</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Pengumuman</td>
-                                        <td>:</td>
-                                        <td>1 Februari – 28 Februari 2023</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Daftar Ulang</td>
-                                        <td>:</td>
-                                        <td>1 Februari – 28 Februari 2023</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Masuk asrama</td>
-                                        <td>:</td>
-                                        <td>1 Februari – 28 Februari 2023</td>
+                                        <td>{{ $y->tanggal }}</td>
                                     </tr>
                                 </table>
+                                @endforeach
+                                @else
+                                <p class="h3 text-bold">Data Timeline Tidak Tersedia</p>
+                                @endif
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-12 mb-5">
-                        <div class="card">
-                            <div class="card-body">
-                                <p class="h3 text-bold">Seleksi Jalur Tes (SJT) : </p>
-                                <table>
-                                    <tr>
-                                        <td>Pendaftaran</td>
-                                        <td>:</td>
-                                        <td>1 Februari – 28 Februari 2023</td>
-                                    </tr>
-                                    
-                                    <tr>
-                                        <td>Seleksi Administrasi</td>
-                                        <td>:</td>
-                                        <td>1 Februari – 28 Februari 2023</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Tes Kesehatan</td>
-                                        <td>:</td>
-                                        <td>1 Februari – 28 Februari 2023</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Wawancara</td>
-                                        <td>:</td>
-                                        <td>1 Februari – 28 Februari 2023</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Tes Psikotes</td>
-                                        <td>:</td>
-                                        <td>1 Februari – 28 Februari 2023</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Tes Kesamaptaan</td>
-                                        <td>:</td>
-                                        <td>1 Februari – 28 Februari 2023</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Pengumuman</td>
-                                        <td>:</td>
-                                        <td>1 Februari – 28 Februari 2023</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Daftar Ulang</td>
-                                        <td>:</td>
-                                        <td>1 Februari – 28 Februari 2023</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Masuk asrama</td>
-                                        <td>:</td>
-                                        <td>1 Februari – 28 Februari 2023</td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 mb-5">
-                        <div class="card">
-                            <div class="card-body">
-                                <p class="h3 text-bold">Seleksi Jalur Mandiri (SJM) : </p>
-                                <table>
-                                    <tr>
-                                        <td>Pendaftaran</td>
-                                        <td>:</td>
-                                        <td>1 Februari – 28 Februari 2023</td>
-                                    </tr>
-                                    
-                                    <tr>
-                                        <td>Seleksi Administrasi</td>
-                                        <td>:</td>
-                                        <td>1 Februari – 28 Februari 2023</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Tes Kesehatan</td>
-                                        <td>:</td>
-                                        <td>1 Februari – 28 Februari 2023</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Wawancara</td>
-                                        <td>:</td>
-                                        <td>1 Februari – 28 Februari 2023</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Tes Psikotes</td>
-                                        <td>:</td>
-                                        <td>1 Februari – 28 Februari 2023</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Tes Kesamaptaan</td>
-                                        <td>:</td>
-                                        <td>1 Februari – 28 Februari 2023</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Pengumuman</td>
-                                        <td>:</td>
-                                        <td>1 Februari – 28 Februari 2023</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Daftar Ulang</td>
-                                        <td>:</td>
-                                        <td>1 Februari – 28 Februari 2023</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Masuk asrama</td>
-                                        <td>:</td>
-                                        <td>1 Februari – 28 Februari 2023</td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    
-
+                    @endforeach
+                    @else
+                    <p class="h3 text-bold">Data Jadwal Tidak Tersedia</p>
+                    @endif
                 </div>
-                
+
             </div>
         </div>
     </div>

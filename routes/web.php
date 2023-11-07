@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\JadwalController;
+use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\PengumumanController;
 use App\Http\Controllers\ProgramStudiController;
+use App\Http\Controllers\TimelineController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,14 +28,14 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 //Jadwal Route
 Route::resource('/jadwal', JadwalController::class);
 Route::resource('/pengumuman', PengumumanController::class);
+Route::resource('/timeline', TimelineController::class);
+Route::resource('/kategori', KategoriController::class);
 
 
 Route::get('/program-studi', [ProgramStudiController::class, 'index'])->name('program-studi');
 
 
-Route::get('/jadwal-pendaftaran', function () {
-    return view('jadwal-pendaftaran');
-})->name('jadwal-pendaftaran');
+Route::get('/jadwal-pendaftaran', [WelcomeController::class , 'indexJadwalPendaftaran'])->name('jadwal-pendaftaran');
 
 
 Route::get('/persyaratan', function () {
