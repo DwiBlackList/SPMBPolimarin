@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Dayatampung;
 use App\Models\Jadwal;
 use App\Models\Kategori;
 use App\Models\Pengumuman;
@@ -15,7 +16,13 @@ class WelcomeController extends Controller
         $pengumuman = Pengumuman::all();
         $timeline = Timeline::all();
         $kategori = Kategori::all();
-        return view('welcome' , compact('jadwal' , 'pengumuman' , 'timeline' , 'kategori'));
+        $dayatampung = Dayatampung::all();
+        $total_daya_tampung_kelas = $dayatampung->sum('daya_tampung_kelas');
+        $total_daya_tampung_mahasiswa = $dayatampung->sum('daya_tampung_mahasiswa');
+        $total_jalur_prestasi = $dayatampung->sum('jalur_prestasi');
+        $total_jalur_tes = $dayatampung->sum('jalur_tes');
+        $total_jalur_mandiri = $dayatampung->sum('jalur_mandiri');
+        return view('welcome' , compact('jadwal' , 'pengumuman' , 'timeline' , 'kategori' , 'dayatampung' , 'total_daya_tampung_kelas' , 'total_daya_tampung_mahasiswa' , 'total_jalur_prestasi' , 'total_jalur_tes' , 'total_jalur_mandiri'));
     }
 
     public function viewPengumuman($id) {

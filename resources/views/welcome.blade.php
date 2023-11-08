@@ -115,33 +115,33 @@
 <div class="container py-5">
     <p class="h1">Jadwal Pendaftaran</p>
     <hr width="15%" style="border-width: 5px;">
-        @if (count($kategori) > 0)
-        @foreach ($kategori as $x)
-        @php $timelines = App\Models\Timeline::all()->where('id_kategori' , '=' , $x->id) @endphp
-        <div class="table-responsive">
-            <table class="table table-bordered table-striped">
-                <tr>
-                    <td colspan="5" class="text-bold">{{ $x->nama_kategori }}</td>
-                </tr>
-                @if (count($timelines) > 0)
-                @foreach ($timelines as $y)
-                <tr>
-                    <td>{{ $y->nama_kegiatan }}</td>
-                    <td>:</td>
-                    <td>{{ $y->tanggal }}</td>
-                </tr>
-                @endforeach
-                @else
-                <tr>
-                    <td class="h3 text-bold">Data Timeline Tidak Tersedia</td>
-                </tr>
-                @endif
-            </table>
-        </div>
-        @endforeach
-        @else
-        <p class="h3 text-bold">Data Jadwal Tidak Tersedia</p>
-        @endif
+    @if (count($kategori) > 0)
+    @foreach ($kategori as $x)
+    @php $timelines = App\Models\Timeline::all()->where('id_kategori' , '=' , $x->id) @endphp
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <tr>
+                <td colspan="5" class="text-bold">{{ $x->nama_kategori }}</td>
+            </tr>
+            @if (count($timelines) > 0)
+            @foreach ($timelines as $y)
+            <tr>
+                <td>{{ $y->nama_kegiatan }}</td>
+                <td>:</td>
+                <td>{{ $y->tanggal }}</td>
+            </tr>
+            @endforeach
+            @else
+            <tr>
+                <td class="h3 text-bold">Data Timeline Tidak Tersedia</td>
+            </tr>
+            @endif
+        </table>
+    </div>
+    @endforeach
+    @else
+    <p class="h3 text-bold">Data Jadwal Tidak Tersedia</p>
+    @endif
 </div>
 
 
@@ -162,31 +162,31 @@
                     <th>Tes</th>
                     <th>Mandiri</th>
                 </tr>
+                @if (count($dayatampung) > 0)
+                @foreach ($dayatampung as $x)
                 <tr>
-                    <td>D-4 Nautika (kelas Reguler)</td>
-                    <td>1</td>
-                    <td>24</td>
-                    <td>10</td>
-                    <td>12</td>
-                    <td>3</td>
+                    <td>{{ $x->program_studi }}</td>
+                    <td>{{ $x->daya_tampung_kelas }}</td>
+                    <td>{{ $x->daya_tampung_mahasiswa }}</td>
+                    <td>{{ $x->jalur_prestasi }}</td>
+                    <td>{{ $x->jalur_tes }}</td>
+                    <td>{{ $x->jalur_mandiri }}</td>
                 </tr>
-                <tr>
-                    <td>D-4 Nautika (kelas Joint Degree)</td>
-                    <td>1</td>
-                    <td>24</td>
-                    <td>10</td>
-                    <td>12</td>
-                    <td>3</td>
-                </tr>
-
+                @endforeach
                 <tr>
                     <td>Jumlah</td>
-                    <td>9</td>
-                    <td>234</td>
-                    <td>57</td>
-                    <td>144</td>
-                    <td>63</td>
+                    <td>{{ $total_daya_tampung_kelas }}</td>
+                    <td>{{ $total_daya_tampung_mahasiswa }}</td>
+                    <td>{{ $total_jalur_prestasi }}</td>
+                    <td>{{ $total_jalur_tes }}</td>
+                    <td>{{ $total_jalur_mandiri }}</td>
                 </tr>
+                @else
+                <tr>
+                    <td colspan="7" class="h3 text-bold">No data available</td>
+                </tr>
+                @endif
+
             </table>
         </div>
     </div>

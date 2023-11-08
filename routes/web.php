@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DayatampungController;
 use App\Http\Controllers\JadwalController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\PengumumanController;
@@ -30,6 +31,7 @@ Route::resource('/jadwal', JadwalController::class);
 Route::resource('/pengumuman', PengumumanController::class);
 Route::resource('/timeline', TimelineController::class);
 Route::resource('/kategori', KategoriController::class);
+Route::resource('/daya-tampung', DayatampungController::class);
 
 
 Route::get('/program-studi', [ProgramStudiController::class, 'index'])->name('program-studi');

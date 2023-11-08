@@ -111,7 +111,7 @@
                             <a class="nav-link" href="{{ route('timeline.index') }}">Timeline</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">DayaTampung</a>
+                            <a class="nav-link" href="{{ route('daya-tampung.index') }}">DayaTampung</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Download</a>
