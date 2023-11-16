@@ -22,22 +22,36 @@
                     <div class="card-body text-center">
                         <p>PANDUAN PENDAFTARAN </p>
                         <ol>
-                            <li>Seleksi Jalur Prestasi <strong>download</strong></li>
-                            <li>Seleksi Jalur Tes <strong>download</strong></li>
-                            <li>Seleksi Jalur Mandiri <strong>download</strong></li>
+                            <li>Seleksi Jalur Prestasi <strong><a href="{{ route('seleksi-jalur-prestasi') }}">Click ME</a></strong></li>
+                            <li>Seleksi Jalur Tes <strong><a href="{{ route('seleksi-jalur-tes') }}">Click ME</a></strong></li>
+                            <li>Seleksi Jalur Mandiri <strong><a href="{{ route('seleksi-jalur-mandiri') }}">Click ME</a></strong></li>
                         </ol>
                     </div>
                 </div>
 
-                <div class="card mb-5">
-                    <div class="card-body text-center">
-                        <p><strong>Panduan Tes Kekhususan:</strong></p>
-                        <p>Panduan Tes Kesamaptaan Polimarin <strong>download</strong></p>
-                        <p>Panduan Tes Kesehatan Polimarin <strong>download</strong></p>
-                        <p>Panduan Psikotes <strong>download</strong></p>
-                        <p>Panduan Wawancara <strong>download</strong></p>
+                @if (count($kategori) > 0)
+                @foreach ($kategori as $x)
+                @php
+                $downloads = App\Models\Download::where('id_download_kategori', 'like', '%' . $x->id . '%')->get();
+                @endphp
+                <div class="col-12 mb-5">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <p class="h3 text-bold">Download Paduan</p>
+                            @if (count($downloads) > 0)
+                            @foreach ($downloads as $y)
+                            <p>{{ $y->judul }} <strong><a href="{{ $y->link }}">Download</a></strong></p>
+                            @endforeach
+                            @else
+                            <p>Paduan Belum Ditambahkan</p>
+                            @endif
+                        </div>
                     </div>
                 </div>
+                @endforeach
+                @else
+                <!-- JIka Kategori Download Tidak ada -->
+                @endif
 
                 <div class="card mb-5">
                     <div class="card-body text-center">

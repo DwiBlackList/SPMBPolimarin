@@ -113,17 +113,32 @@
                         </div>
                     </div>
 
+                    @if (count($kategori) > 0)
+                    @foreach ($kategori as $x)
+                    @php
+                    $downloads = App\Models\Download::where('id_download_kategori', 'like', '%' . $x->id . '%')->get();
+                    @endphp
                     <div class="col-12 mb-5">
                         <div class="card">
                             <div class="card-body text-center">
                                 <p class="h3 text-bold">Download Paduan</p>
-                                <p>Panduan Pendaftaran Seleksi Jalur Prestasi <strong>download</strong></p>
+                                @if (count($downloads) > 0)
+                                @foreach ($downloads as $y)
+                                <p>{{ $y->judul }} <strong><a href="{{ $y->link }}">Download</a></strong></p>
+                                @endforeach
+                                @else
+                                <p>Paduan Belum Ditambahkan</p>
+                                @endif
                             </div>
                         </div>
                     </div>
+                    @endforeach
+                    @else
+                    <!-- JIka Kategori Download Tidak ada -->
+                    @endif
 
                 </div>
-                
+
             </div>
         </div>
     </div>

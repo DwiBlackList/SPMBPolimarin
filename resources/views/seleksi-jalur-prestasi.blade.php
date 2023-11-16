@@ -156,28 +156,32 @@
                         </div>
                     </div>
 
+                    @if (count($kategori) > 0)
+                    @foreach ($kategori as $x)
+                    @php
+                    $downloads = App\Models\Download::where('id_download_kategori', 'like', '%' . $x->id . '%')->get();
+                    @endphp
                     <div class="col-12 mb-5">
                         <div class="card">
                             <div class="card-body text-center">
                                 <p class="h3 text-bold">Download Paduan</p>
-                                <p>Panduan Pendaftaran Seleksi Jalur Prestasi <strong>download</strong></p>
-                                <p>Panduan Tes Kekhususan:</strong></p>
-                                <p>Panduan Tes Kesamaptaan Polimarin <strong>download</strong></p>
-                                <p>Panduan Tes Kesehatan Polimarin <strong>download</strong></p>
-                                <p>Panduan Psikotes <strong>download</strong></p>
-                                <p>Panduan Wawancara <strong>download</strong></p>
-                                <p>Lampiran Tes kekhususan yang harus dicetak:</strong></p>
-                                <p>Lampiran 1 (Surat Pernyataan Tes Kekhususan) <strong>download</strong></p>
-                                <p>Lampiran 2 (Hasil Tes Kesamaptaan) <strong>download</strong></p>
-                                <p>Lampiran 3 (Dokumen Pemeriksaan Kesehatan) <strong>download</strong></p>
-                                <p>Lampiran 4 (Surat Pernyataan Tes Kesehatan) <strong>download</strong></p>
-                                <p>Lampiran 5 (Formulir Wawancara Keuangan) <strong>download</strong></p>
+                                @if (count($downloads) > 0)
+                                @foreach ($downloads as $y)
+                                <p>{{ $y->judul }} <strong><a href="{{ $y->link }}">Download</a></strong></p>
+                                @endforeach
+                                @else
+                                <p>Paduan Belum Ditambahkan</p>
+                                @endif
                             </div>
                         </div>
                     </div>
+                    @endforeach
+                    @else
+                    <!-- JIka Kategori Download Tidak ada -->
+                    @endif
 
                 </div>
-                
+
             </div>
         </div>
     </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Dayatampung;
+use App\Models\DownloadKategori;
 use App\Models\Jadwal;
 use App\Models\Kategori;
 use App\Models\Pengumuman;
@@ -36,5 +37,41 @@ class WelcomeController extends Controller
         $kategori = Kategori::all();
 
         return view('jadwal-pendaftaran' , compact('timeline' , 'kategori'));
+    }
+
+    public function indexPersyaratan() {
+        $kategori = DownloadKategori::where('nama_kategori' , '=' , 'Persyaratan')->get();
+
+        return view('persyaratan' , compact('kategori'));
+    }
+    
+    public function indexSJP() {
+        $kategori = DownloadKategori::where('nama_kategori' , '=' , 'Seleksi Jalur Prestasi')->get();
+
+        return view('seleksi-jalur-prestasi' , compact('kategori'));
+    }
+
+    public function indexSJT() {
+        $kategori = DownloadKategori::where('nama_kategori' , '=' , 'Seleksi Jalur Tes')->get();
+
+        return view('seleksi-jalur-tes' , compact('kategori'));
+    }
+
+    public function indexSJM() {
+        $kategori = DownloadKategori::where('nama_kategori' , '=' , 'Seleksi Jalur Mandiri')->get();
+
+        return view('seleksi-jalur-mandiri' , compact('kategori'));
+    }
+    
+    public function indexTK() {
+        $kategori = DownloadKategori::where('nama_kategori' , '=' , 'Tes Kekhususan')->get();
+
+        return view('tes-kekhususan' , compact('kategori'));
+    }
+
+    public function download() {
+        $kategori = DownloadKategori::all();
+
+        return view('download' , compact('kategori'));
     }
 }

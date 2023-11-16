@@ -44,9 +44,7 @@ Route::get('/program-studi', [ProgramStudiController::class, 'index'])->name('pr
 Route::get('/jadwal-pendaftaran', [WelcomeController::class , 'indexJadwalPendaftaran'])->name('jadwal-pendaftaran');
 
 
-Route::get('/persyaratan', function () {
-    return view('persyaratan');
-})->name('persyaratan');
+Route::get('/persyaratan', [WelcomeController::class , 'indexPersyaratan'])->name('persyaratan');
 
 
 Route::get('/alur-pendaftaran', function () {
@@ -63,24 +61,16 @@ Route::get('/program-alih-jenjang', function () {
 })->name('program-alih-jenjang');
 
 
-Route::get('/seleksi-jalur-prestasi', function () {
-    return view('seleksi-jalur-prestasi');
-})->name('seleksi-jalur-prestasi');
+Route::get('/seleksi-jalur-prestasi', [WelcomeController::class , 'indexSJP'])->name('seleksi-jalur-prestasi');
 
 
-Route::get('/seleksi-jalur-tes', function () {
-    return view('seleksi-jalur-tes');
-})->name('seleksi-jalur-tes');
+Route::get('/seleksi-jalur-tes', [WelcomeController::class , 'indexSJT'])->name('seleksi-jalur-tes');
 
 
-Route::get('/seleksi-jalur-mandiri', function () {
-    return view('seleksi-jalur-mandiri');
-})->name('seleksi-jalur-mandiri');
+Route::get('/seleksi-jalur-mandiri', [WelcomeController::class , 'indexSJM'])->name('seleksi-jalur-mandiri');
 
 
-Route::get('/tes-kekhususan', function () {
-    return view('tes-kekhususan');
-})->name('tes-kekhususan');
+Route::get('/tes-kekhususan', [WelcomeController::class , 'indexTK'])->name('tes-kekhususan');
 
 
 Route::get('/kontak', function () {
@@ -88,6 +78,4 @@ Route::get('/kontak', function () {
 })->name('kontak');
 
 
-Route::get('/downloads', function () {
-    return view('download');
-})->name('downloads');
+Route::get('/downloads', [WelcomeController::class , 'download'])->name('downloads');

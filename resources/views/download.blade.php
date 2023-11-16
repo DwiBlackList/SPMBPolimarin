@@ -9,66 +9,45 @@
 <div class="py-5 bg-info"> <!-- Rubah bg dan padding atas -->
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-6 mb-5">
-                <div class="card">
-                    <div class="card-body text-center">
-                        <span class="material-symbols-outlined">
-                            download
-                        </span>
-                        <p class="h6">PENGUMUMAN SELEKSI PROGRAM MAGISTER TERAPAN (GEL 2)</p>
-                        <p>Pengumuman hasil seleksi Program Magister Terapan POLINES 2023 (Gelombang 2)</p>
-                    </div>
-                </div>
-            </div>
 
+            @if (count($kategori) > 0)
+            @foreach ($kategori as $x)
+            @php
+            $downloads = App\Models\Download::where('id_download_kategori', 'like', '%' . $x->id . '%')->get();
+            @endphp
+            <p class="h2">{{ $x->nama_kategori }}</p>
+            <hr width="15%" style="border-width: 5px;">
+            @if (count($downloads) > 0)
+            @foreach ($downloads as $y)
+            <div class="col-12 col-md-6 mb-5">
+                <a href="{{ $y->link }}">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <span class="material-symbols-outlined">
+                                download
+                            </span>
+                            <p class="h6">{{ $y->judul }}</p>
+                            <p>{{ $y->deskripsi }}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            @endforeach
+            @else
             <div class="col-12 col-md-6 mb-5">
                 <div class="card">
                     <div class="card-body text-center">
-                        <span class="material-symbols-outlined">
-                            download
-                        </span>
-                        <p class="h6">PENGUMUMAN SELEKSI PROGRAM MAGISTER TERAPAN (GEL 2)</p>
-                        <p>Pengumuman hasil seleksi Program Magister Terapan POLINES 2023 (Gelombang 2)</p>
+                        Data Download Tidak Ada Di Kategori Ini
                     </div>
                 </div>
             </div>
+            @endif
+            @endforeach
+            @else
+            <!-- jika kategori tidak ada -->
+            @endif
 
-            <div class="col-12 col-md-6 mb-5">
-                <div class="card">
-                    <div class="card-body text-center">
-                        <span class="material-symbols-outlined">
-                            download
-                        </span>
-                        <p class="h6">PENGUMUMAN SELEKSI PROGRAM MAGISTER TERAPAN (GEL 2)</p>
-                        <p>Pengumuman hasil seleksi Program Magister Terapan POLINES 2023 (Gelombang 2)</p>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-12 col-md-6 mb-5">
-                <div class="card">
-                    <div class="card-body text-center">
-                        <span class="material-symbols-outlined">
-                            download
-                        </span>
-                        <p class="h6">PENGUMUMAN SELEKSI PROGRAM MAGISTER TERAPAN (GEL 2)</p>
-                        <p>Pengumuman hasil seleksi Program Magister Terapan POLINES 2023 (Gelombang 2)</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 mb-5">
-                <div class="card">
-                    <div class="card-body text-center">
-                        <span class="material-symbols-outlined">
-                            download
-                        </span>
-                        <p class="h6">PENGUMUMAN SELEKSI PROGRAM MAGISTER TERAPAN (GEL 2)</p>
-                        <p>Pengumuman hasil seleksi Program Magister Terapan POLINES 2023 (Gelombang 2)</p>
-                    </div>
-                </div>
-            </div>
-            
         </div>
     </div>
 </div>
