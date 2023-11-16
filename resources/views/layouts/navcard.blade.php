@@ -66,7 +66,7 @@
             </div>
         </a>
         <hr>
-        <a id="navcard" href="{{ route('download') }}">
+        <a id="navcard" href="{{ route('downloads') }}">
             <div class="d-flex align-content-center">
                  Download
             </div>

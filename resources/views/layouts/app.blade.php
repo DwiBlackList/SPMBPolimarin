@@ -81,7 +81,7 @@
                                     <a class="nav-link" href="{{ route('kontak') }}">Kontak</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('download') }}">Download</a>
+                                    <a class="nav-link" href="{{ route('downloads') }}">Download</a>
                                 </li>
                             </ul>
                         </li>
@@ -114,7 +114,7 @@
                             <a class="nav-link" href="{{ route('daya-tampung.index') }}">DayaTampung</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Download</a>
+                            <a class="nav-link" href="{{ route('download.index') }}">Download</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
