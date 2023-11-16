@@ -79,8 +79,8 @@
                         <div class="col-md-7 col-12">
                             <div class="row">
                                 @foreach($pengumuman as $x)
-                                <a id="link-pengumuman" href="{{ route('viewPengumuman' , $x->id) }}">
-                                    <div class="col-md-6 col-12 py-2">
+                                <div class="col-md-6 col-12 py-2">
+                                    <a id="link-pengumuman" href="{{ route('viewPengumuman' , $x->id) }}">
                                         <div class="card">
                                             <div class="card-body text-center">
                                                 <span class="material-symbols-outlined">
@@ -98,8 +98,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
                                 @endforeach
                             </div>
                         </div>
