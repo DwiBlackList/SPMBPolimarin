@@ -28,7 +28,8 @@
                 <li>Jika Kategori Point No 1 Tidak ada , maka pada halaman tersebut tidak ada menu download</li>
                 <li>Kategori Diluar Point No 1 Akan Masuk Ke Kategori Yang Hanya Ditampilkan Di Halaman Download</li>
                 <li>Pemilihan Kategori Bisa Lebih Dari 1 Kategori</li>
-                <li>Jika Terdapat Data Dengan Lebih Dari 2 Kategori , Dan Ingin Di Hapus / Edit Maka Data Tersebut Akan Terhapus / Teredit Di Semua Kategori</li>
+                <li>Jika Terdapat Data Download Dengan Lebih Dari 2 Kategori , Dan Ingin Di Hapus / Edit Maka Data Tersebut Akan Terhapus / Teredit Di Semua Kategori</li>
+                <li>Jika Kategori Dihapus Maka Data Download Dengan Kategori Tersebut Akan Terhapus , Baik Dengan Data Download 1 Kategori ataupun lebih dari 1 Kategori Data Download Tersebut Akan Terhapus</li>
             </ul>
             <hr>
 
@@ -266,6 +267,15 @@
         icon: 'success',
         title: 'Success!',
         text: "{{ Session::get('success') }}",
+    });
+</script>
+@endif
+@if (Session::has('failed'))
+<script>
+    Swal.fire({
+        icon: 'error',
+        title: 'Failed!',
+        text: "{{ Session::get('failed') }}",
     });
 </script>
 @endif

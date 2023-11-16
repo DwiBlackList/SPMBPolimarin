@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 
 class DownloadKategoriController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      */
@@ -73,7 +77,7 @@ class DownloadKategoriController extends Controller
      */
     public function destroy($id)
     {
-        $download = Download::where('id_download_kategori' , $id);
+        $download = Download::where('id_download_kategori' , 'like' , '%' . $id . '%');
         $download->delete();
         $kategori = DownloadKategori::findOrFail($id);
         $kategori->delete();

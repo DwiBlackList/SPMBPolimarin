@@ -7,9 +7,14 @@ use App\Models\DownloadKategori;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
 
 class DownloadController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      */
@@ -34,6 +39,18 @@ class DownloadController extends Controller
      */
     public function store(Request $request)
     {
+        $validator = Validator::make($request->all(), [
+            'judul' => 'required',
+            'deskripsi' => 'required',
+            'link' => 'required',
+            'id_download_kategori' => 'required|array',
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->route('download.index')->with('failed', 'Item created failed , Mungkin ada bagian yang kosong'); // To repopulate the old input values in the form
+        }
+
+
         $id_download_kategori = implode(', ', $request->id_download_kategori);
 
         $download = new Download();
