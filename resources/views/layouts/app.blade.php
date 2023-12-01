@@ -1,3 +1,7 @@
+@php
+$settings = \App\Models\Settings::findOrFail(1);
+@endphp
+
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -8,7 +12,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ $settings->nama_web }}</title>
+    <link rel="icon" href="{{ asset($settings->icon) }}" type="image/x-icon">
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -26,6 +31,9 @@
 
     <script src="https://cdn.tiny.cloud/1/807dbzqb5t2mecju9htfi10af5vpbjqqi11avqry5dpopr8i/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
@@ -36,7 +44,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="https://pmb.polimarin.ac.id/wp-content/themes/Ostion%20Theme%20Package/ostion/images/logo.png" alt="logo" width="40%">
+                    <img src="{{ asset($settings->logo) }}" alt="logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -118,6 +126,17 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                Settings
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('settings.index') }}">Setting Utama</a>
+                                <a class="dropdown-item" href="{{ route('sliders.index') }}">Setting Slider</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }}
                             </a>
 
@@ -143,7 +162,8 @@
         </main>
 
         <div class="floating-button">
-            <a href="https://wa.me/6282138929393" target="_blank" class="floating-btn">Live Chat PMB</a>
+            
+            <a href="https://wa.me/{{ $settings->nowa }}" target="_blank" class=""><img src="{{ asset($settings->gambar_wa) }}" alt=""></a>
         </div>
         <!-- Footer -->
         <div class="container py-5">

@@ -7,6 +7,8 @@ use App\Http\Controllers\JadwalController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\PengumumanController;
 use App\Http\Controllers\ProgramStudiController;
+use App\Http\Controllers\SettingsController;
+use App\Http\Controllers\SliderController;
 use App\Http\Controllers\TimelineController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
@@ -36,6 +38,8 @@ Route::resource('/kategori', KategoriController::class);
 Route::resource('/daya-tampung', DayatampungController::class);
 Route::resource('/download', DownloadController::class);
 Route::resource('/downloadkategori', DownloadKategoriController::class);
+Route::resource('/settings', SettingsController::class);
+Route::resource('/sliders', SliderController::class);
 
 
 Route::get('/program-studi', [ProgramStudiController::class, 'index'])->name('program-studi');

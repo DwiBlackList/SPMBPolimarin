@@ -1,28 +1,32 @@
 @extends('layouts.app')
 
 @section('content')
+@php
+$settings = \App\Models\Settings::findOrFail(1);
+$sliders = \App\Models\Slider::all();
+$angka = 0;
+@endphp
 <!-- Paling atas -->
 <!-- Carousel -->
 <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
     <!-- Indicators/dots -->
     <div class="carousel-indicators">
-        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        @foreach($sliders as $x)
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="{{ $angka }}" class="active"></button>
+        @php
+        $angka++;
+        @endphp    
+        @endforeach
     </div>
 
     <!-- The slideshow/carousel -->
     <div class="carousel-inner">
+        @foreach($sliders as $x)
         <div class="carousel-item active">
-            <img src="https://pmb.dinus.ac.id/wp-content/uploads/sites/7/2023/02/03.-Alur-Kebutuhan-Khusus-scaled.jpg" alt="Los Angeles" class="d-block w-100">
+            <img src="{{ asset($x->gambar) }}" alt="" class="d-block w-100">
         </div>
-        <div class="carousel-item">
-            <img src="https://pmb.dinus.ac.id/wp-content/uploads/sites/7/2023/09/slider1-scaled.jpg" alt="Chicago" class="d-block w-100">
-        </div>
-        <div class="carousel-item">
-            <img src="https://pmb.dinus.ac.id/wp-content/uploads/sites/7/2023/09/slider2-scaled.jpg" alt="New York" class="d-block w-100">
-        </div>
+        @endforeach
     </div>
 
     <!-- Left and right controls/icons -->
@@ -35,10 +39,7 @@
 </div>
 <div class="py-5 bg-info">
     <div class="container">
-        <p class="h1 text-white text-bold">Polimarin</p>
-        <p class="text-white">
-            "Politeknik Maritim Negeri Indonesia VISI Menjadi Politeknik Maritim Negeri bertaraf internasional, yang menghasilkan sumber daya manusia berkarakter, berkompetensi dibidang maritim dan berdaya saing global yang berwawasan lingkungan."
-        </p>
+        {!! $settings->deskripsi !!}
 
         <div class="row">
             @foreach($jadwal as $x)
