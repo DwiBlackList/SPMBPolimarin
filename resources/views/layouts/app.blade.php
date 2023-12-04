@@ -20,7 +20,7 @@ $settings = \App\Models\Settings::findOrFail(1);
     <!-- <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet"> -->
 
     <!-- Icon -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
