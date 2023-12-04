@@ -158,7 +158,7 @@ $settings = \App\Models\Settings::findOrFail(1);
 
         <div class="floating-button">
             
-            <a href="https://wa.me/{{ $settings->nowa }}" target="_blank" class=""><img src="{{ asset($settings->gambar_wa) }}" width="20%" height="20%" alt=""></a>
+            <a href="https://wa.me/{{ $settings->nowa }}" target="_blank" class=""><img src="{{ asset($settings->gambar_wa) }}" width="100%" height="100%" alt=""></a>
         </div>
         <!-- Footer -->
         <div class="container py-5">
