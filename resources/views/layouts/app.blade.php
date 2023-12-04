@@ -24,7 +24,10 @@ $settings = \App\Models\Settings::findOrFail(1);
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
-    
+
+    <script src="https://cdn.tiny.cloud/1/807dbzqb5t2mecju9htfi10af5vpbjqqi11avqry5dpopr8i/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
+
 
     <!-- Font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -157,7 +160,7 @@ $settings = \App\Models\Settings::findOrFail(1);
         </main>
 
         <div class="floating-button">
-            
+
             <a href="https://wa.me/{{ $settings->nowa }}" target="_blank" class=""><img src="{{ asset($settings->gambar_wa) }}" width="100%" height="100%" alt=""></a>
         </div>
         <!-- Footer -->
@@ -172,5 +175,4 @@ $settings = \App\Models\Settings::findOrFail(1);
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<script src="https://cdn.tiny.cloud/1/807dbzqb5t2mecju9htfi10af5vpbjqqi11avqry5dpopr8i/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 </html>
