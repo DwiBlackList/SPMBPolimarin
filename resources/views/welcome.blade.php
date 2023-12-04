@@ -37,7 +37,7 @@ $angka = 0;
         <span class="carousel-control-next-icon"></span>
     </button>
 </div>
-<div class="py-5 bg-info">
+<div class="py-2 bg-info">
     <div class="container">
         {!! $settings->deskripsi !!}
 
@@ -60,7 +60,7 @@ $angka = 0;
         </center>
     </div>
 </div>
-<div class="container-fluid py-5" style="background-color:#f6f6f7;">
+<div class="container-fluid py-2" style="background-color:#f6f6f7;">
     <div class="row">
         <div class="col-12 col-md-2">
             @include('layouts.navcard')

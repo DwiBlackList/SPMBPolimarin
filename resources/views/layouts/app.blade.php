@@ -16,8 +16,8 @@ $settings = \App\Models\Settings::findOrFail(1);
     <link rel="icon" href="{{ asset($settings->icon) }}" type="image/x-icon">
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    <!-- <link rel="dns-prefetch" href="//fonts.bunny.net"> -->
+    <!-- <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet"> -->
 
     <!-- Icon -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
@@ -35,7 +35,6 @@ $settings = \App\Models\Settings::findOrFail(1);
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 
 <body>
@@ -44,7 +43,7 @@ $settings = \App\Models\Settings::findOrFail(1);
         <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="{{ asset($settings->logo) }}" alt="logo">
+                    <img src="{{ asset($settings->logo) }}" width="20%" height="20%" alt="logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -163,7 +162,7 @@ $settings = \App\Models\Settings::findOrFail(1);
 
         <div class="floating-button">
             
-            <a href="https://wa.me/{{ $settings->nowa }}" target="_blank" class=""><img src="{{ asset($settings->gambar_wa) }}" alt=""></a>
+            <a href="https://wa.me/{{ $settings->nowa }}" target="_blank" class=""><img src="{{ asset($settings->gambar_wa) }}" width="20%" height="20%" alt=""></a>
         </div>
         <!-- Footer -->
         <div class="container py-5">
