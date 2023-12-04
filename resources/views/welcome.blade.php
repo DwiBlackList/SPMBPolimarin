@@ -24,7 +24,7 @@ $angka = 0;
     <div class="carousel-inner">
         @foreach($sliders as $x)
         <div class="carousel-item active">
-            <img src="{{ asset($x->gambar) }}" alt="" class="d-block w-100">
+            <img src="{{ asset($x->gambar) }}" alt="" class="d-block w-100 h-50">
         </div>
         @endforeach
     </div>

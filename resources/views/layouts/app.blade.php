@@ -44,7 +44,7 @@ $settings = \App\Models\Settings::findOrFail(1);
         <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="{{ asset($settings->logo) }}" width="20%" height="20%" alt="logo">
+                    <img src="{{ asset($settings->logo) }}" width="25%" height="25%" alt="logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
