@@ -92,6 +92,7 @@ class SettingsController extends Controller
         }
 
         $settings->nama_web = $request->nama_web;
+        $settings->link_daftar = $request->link_daftar;
         $settings->deskripsi = $request->deskripsi;
         $settings->google_map = $request->google_map;
         $settings->alamat = $request->alamat;

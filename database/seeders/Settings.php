@@ -15,6 +15,7 @@ class Settings extends Seeder
     {
         DB::table('settings')->insert([
             'nama_web' => 'PMB Polimarin',
+            'link_daftar' => 'http://#',
             'deskripsi' => '<p><span style="font-size: 18pt;"><strong>Polimarin</strong></span></p>
 
             <p class="text-white">"Politeknik Maritim Negeri Indonesia VISI Menjadi Politeknik Maritim Negeri bertaraf internasional, yang menghasilkan sumber daya manusia berkarakter, berkompetensi dibidang maritim dan berdaya saing global yang berwawasan lingkungan."</p>',

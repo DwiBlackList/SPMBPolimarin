@@ -56,7 +56,7 @@ $angka = 0;
         </div>
         <hr>
         <center>
-            <a href="https://akademik.polimarin.ac.id/pmb/" target="_blank" class="btn rounded-pill btn-success">Daftar Sekarang</a>
+            <a href="{{ $settings->link_daftar }}" target="_blank" class="btn rounded-pill btn-success">Daftar Sekarang</a>
         </center>
     </div>
 </div>

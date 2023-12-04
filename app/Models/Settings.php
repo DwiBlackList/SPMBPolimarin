@@ -11,5 +11,5 @@ class Settings extends Model
 
     protected $table = 'settings';
 
-    protected $fillable = ['nama_web' , 'deskripsi' , 'icon' , 'logo' , 'gambar_wa' , 'google_map' , 'alamat' , 'notelp' , 'nowa' , 'halaman' , 'kontak_email' , 'link_fb' , 'link_twitter' , 'link_instagram'];
+    protected $fillable = ['nama_web' , 'link_daftar' , 'deskripsi' , 'icon' , 'logo' , 'gambar_wa' , 'google_map' , 'alamat' , 'notelp' , 'nowa' , 'halaman' , 'kontak_email' , 'link_fb' , 'link_twitter' , 'link_instagram'];
 }

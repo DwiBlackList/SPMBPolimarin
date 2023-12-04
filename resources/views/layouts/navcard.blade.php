@@ -6,7 +6,7 @@
             </div>
         </a>
         <hr>
-        <a id="navcard" href="https://akademik.polimarin.ac.id/pmb/" target="_blank">
+        <a id="navcard" href="{{ $settings->link_daftar }}" target="_blank">
             <div class="d-flex align-content-center">
                  Portal SPMB
             </div>

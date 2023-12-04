@@ -13,6 +13,10 @@
                 <input type="text" class="form-control" value="{{ $settings->nama_web }}" name="nama_web" placeholder="Nama Website" required>
                 <p>PMB .....</p>
                 <hr>
+                <p>Link Pendafataran</p>
+                <input type="text" class="form-control" value="{{ $settings->link_daftar }}" name="link_daftar" placeholder="https" required>
+                <p>http.... link ini dibawah deskripsi halaman utama dan portal spmb di navcard</p>
+                <hr>
                 <p>Deskripsi</p>
                 <textarea name="deskripsi" required>{{ $settings->deskripsi }}</textarea>
                 <p>Deskripsi Web. Bagian Bawah Slider</p>
