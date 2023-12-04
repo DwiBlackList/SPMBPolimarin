@@ -20,7 +20,7 @@
                 <p>Icon</p>
                 <div class="row">
                     <div class="col-12 col-md-6">
-                        <input type="file" class="form-file" value="{{ $settings->icon }}" name="icon">
+                        <input type="file" class="form-control" value="{{ $settings->icon }}" name="icon">
                     </div>
                     <div class="col-12 col-md-6">
                         Icon Saat Ini :
@@ -32,7 +32,7 @@
                 <p>Logo</p>
                 <div class="row">
                     <div class="col-12 col-md-6">
-                        <input type="file" class="form-file" value="{{ $settings->logo }}" name="logo">
+                        <input type="file" class="form-control" value="{{ $settings->logo }}" name="logo">
                     </div>
                     <div class="col-12 col-md-6">
                         Logo Saat Ini :
@@ -44,7 +44,7 @@
                 <p>Gambar WA Live Chat</p>
                 <div class="row">
                     <div class="col-12 col-md-6">
-                        <input type="file" class="form-file" value="{{ $settings->gambar_wa }}" name="gambar_wa">
+                        <input type="file" class="form-control" value="{{ $settings->gambar_wa }}" name="gambar_wa">
                     </div>
                     <div class="col-12 col-md-6">
                         Logo Saat Ini :
