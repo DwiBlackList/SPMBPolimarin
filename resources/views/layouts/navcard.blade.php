@@ -1,3 +1,6 @@
+@php
+$settings = \App\Models\Settings::findOrFail(1);
+@endphp
 <div class="card mb-5">
     <div class="card-body">
         <a id="navcard" href="/">
